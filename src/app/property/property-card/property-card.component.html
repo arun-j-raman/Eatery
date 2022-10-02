@@ -1,12 +1,21 @@
-<div class="row" style="width: 300px">
-  <div class="shadow-lg col-md-12 p-3">
-    <div class="card">
-      <img class="cardItemImg" src="assets/Images/fooditem.png" />
-      <div class="card-body p-2">
-        <h1>{{ Property.Name }}</h1>
-        <h3>{{ Property.Type }}</h3>
-        <h4>{{ Property.Price }}</h4>
-      </div>
-    </div>
+<div class="card">
+  <div class="card-img-wrapper">
+    <img class="card-item-img" src="assets/Images/fooditem.png" />
+
+      <ul class="list-inline text-center member-icons animate">
+        <li class="list-inline-item">
+          <button class="btn btn-primary">E</button>
+        </li>
+        <li class="list-inline-item">
+          <button class="btn btn-primary">C</button>
+        </li>
+      </ul>
+
+  </div>
+
+  <div class="card-body p-2">
+    <h1>{{ fooditem.Name }}</h1>
+    <h3>{{ fooditem.Type }}</h3>
+    <h4>{{ fooditem.Price }}</h4>
   </div>
 </div>
