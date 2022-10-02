@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { EateryService } from 'src/app/services/eatery.service';
+import { ActivatedRoute } from '@angular/router'
+import { Iproperty } from '../Iproperty';
 
 @Component({
   selector: 'app-property-list',
@@ -6,40 +9,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./property-list.component.css'],
 })
 export class PropertyListComponent implements OnInit {
-  FoodItems: Array<any> = [
-    {
-      Id: 1,
-      Name: 'Sweet Corn',
-      Type: 'Starters',
-      Price: 125,
-    },
-    {
-      Id: 2,
-      Name: 'French Fries',
-      Type: 'Starters',
-      Price: 120,
-    },
-    {
-      Id: 3,
-      Name: 'Veg. Noodles',
-      Type: 'Starters',
-      Price: 185,
-    },
-    {
-      Id: 4,
-      Name: 'Fried Rice',
-      Type: 'Starters',
-      Price: 225,
-    },
-    {
-      Id: 5,
-      Name: 'Veg Roll',
-      Type: 'Starters',
-      Price: 85,
-    },
-  ];
+  FoodItems: any;
+  AddOn = 1;
 
-  constructor() {}
+  constructor(private route:ActivatedRoute,private eateryService: EateryService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    if(this.route.snapshot.url.toString())
+    {
+      this.AddOn = 2;
+    }
+
+    this.eateryService.getAllProperties().subscribe(
+      (data) => {
+        this.FoodItems = data;
+        console.log(data);
+
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
 }

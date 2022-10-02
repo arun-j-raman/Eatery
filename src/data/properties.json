@@ -1,0 +1,50 @@
+[
+  {
+    "Id": 1,
+    "AddOn":0,
+    "Name": "Sweet Corn",
+    "Type": "Starters",
+    "Price": 25,
+    "Image":"item-1"
+  },
+  {
+    "Id": 2,
+    "AddOn":0,
+    "Name": "Fried Rice",
+    "Type": "Main Course",
+    "Price": 60,
+    "Image":"item-2"
+  },
+  {
+    "Id": 3,
+    "AddOn":0,
+    "Name": "Garlic Bread",
+    "Type": "Starters",
+    "Price": 50,
+    "Image":"item-3"
+  },
+  {
+    "Id": 4,
+    "AddOn":0,
+    "Name": "Veg. Noodles",
+    "Type": "Main Course",
+    "Price": 125,
+    "Image":"item-4"
+  },
+  {
+    "Id": 5,
+    "AddOn":1,
+    "Name": "Roasted Papad",
+    "Type": "Add-on",
+    "Price": 20,
+    "Image":"item-5"
+  },
+  {
+    "Id": 6,
+    "AddOn":1,
+    "Name": "Tomato Ketchup",
+    "Type": "Add-on",
+    "Price": 2,
+    "Image":"item-6"
+  }
+]

@@ -1,21 +1,20 @@
 <div class="card">
   <div class="card-img-wrapper">
-    <img class="card-item-img" src="assets/Images/fooditem.png" />
-
-      <ul class="list-inline text-center member-icons animate">
-        <li class="list-inline-item">
-          <button class="btn btn-primary">E</button>
-        </li>
-        <li class="list-inline-item">
-          <button class="btn btn-primary">C</button>
-        </li>
-      </ul>
-
+    <img *ngIf="fooditem.Image" class="card-item-img" src="assets/Images/{{fooditem.Image}}.jpg" />
+    <img *ngIf="!fooditem.Image" class="card-item-img" src="assets/Images/fooditem.jpg" />
+    <ul class="list-inline text-center member-icons animate">
+      <li class="list-inline-item">
+        <button class="btn btn-primary" routerLink="/item-details/{{fooditem.Id}}">E</button>
+      </li>
+      <li class="list-inline-item">
+        <button class="btn btn-primary">C</button>
+      </li>
+    </ul>
   </div>
 
   <div class="card-body p-2">
-    <h1>{{ fooditem.Name }}</h1>
-    <h3>{{ fooditem.Type }}</h3>
-    <h4>{{ fooditem.Price }}</h4>
+    <h3>{{ fooditem.Name }}</h3>
+    <h4>{{ fooditem.Type }}</h4>
+    <h5>₹ {{ fooditem.Price }}</h5>
   </div>
 </div>
